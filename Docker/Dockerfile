@@ -13,7 +13,6 @@ RUN mkdir -p /root/.ssh
 
 RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
 
-RUN chmod 400 /root/.ssh/id_rsa
 RUN /usr/bin/ssh-keyscan github.com >> /root/.ssh/known_hosts
 
 RUN rm -rf /var/www/html/
