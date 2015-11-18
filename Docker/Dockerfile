@@ -20,7 +20,7 @@ RUN /usr/bin/ssh-keyscan github.com >> /root/.ssh/known_hosts
 RUN rm -rf /var/www/html/
 RUN mkdir -p /var/www/html/
 
-RUN /usr/bin/git clone ssh://git@github.com/inventure/Website /var/www/inventure.com
+RUN /usr/bin/git clone https://github.com/yiisoft/yii.git /var/www/yii
 ADD apache.conf /etc/apache2/sites-enabled/000-default.conf
 COPY supervisord.conf /etc/supervisord.conf
 
